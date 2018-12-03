@@ -8,6 +8,9 @@ Original file is located at
 """
 
 def visualise_2d_dataset(model = None, x = None, y_label = y):
+  import matplotlib.pyplot as plt
+  import numpy as np
+  %matplotlib inline
   if not model:
       raise ValueError('Please Provide model first')
   if model:
