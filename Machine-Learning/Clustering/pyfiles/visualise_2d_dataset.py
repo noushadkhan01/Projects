@@ -7,13 +7,9 @@ Original file is located at
     https://colab.research.google.com/drive/1RKPrQGliCxycONMMrhVJefFIIeplccHh
 """
 
-def visualise_2d_dataset(model = None, x = None, optimal_clusters = None):
+def visualise_2d_dataset(model = None, x = None, y_label = y):
   if not model:
-    if not optimal_clusters:
-      raise ValueError('Please Provide the number of optimal Clusters')
-    else:
-      model = KMeans(n_clusters = optimal_clusters, n_init = 10)
-      model.fit(x)
+      raise ValueError('Please Provide model first')
   if model:
       y_label = model.fit_predict(x)
       plt.figure(figsize = (10, 7))
